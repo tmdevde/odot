@@ -27,7 +27,7 @@ style=" fill:#000000;"><path d="M 12 3 C 11.398438 3 11 3.398438 11 4 L 11 11 L 
                 </div>
             @endif
             <div wire:loading wire:target="getTasks" class="spinner mb-2"></div>
-        </div>
+        </div> 
 
     </div>
 
