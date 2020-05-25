@@ -31,3 +31,13 @@ Route::middleware('auth')->group(function () {
 
     Route::view('password/confirm', 'auth.passwords.confirm')->name('password.confirm');
 });
+
+
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:cache');
+    $exitCode = Artisan::call('view:clear');
+    $exitCode = Artisan::call('route:clear');
+    //$exitCode = Artisan::call('optimize');
+    return 'cache cleared';
+  });
