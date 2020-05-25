@@ -23,7 +23,7 @@ class Projects extends Component
     }
 
     public function getProjects() {
-        $this->project_list = Project::where('user_id',Auth::user()->id)->get();
+        $this->project_list = Project::where('user_id',Auth::user()->id)->orderBy('name')->get();
     }
 
     public function addProject() {
